@@ -1,0 +1,60 @@
+[
+    {
+        "key": "1U",
+        "name": "St. Martin's Island",
+        "duration":"3 Days",
+        "price": "5000",
+        "location":"Island in Bangladesh",
+        "description": "St. Martin's Island is a small island in the northeastern part of the Bay of Bengal, ",
+        "img": "https://i.ibb.co/3MvbySC/Saint-martin.jpg"
+    },
+    {
+        "key": "2O",
+        "name": "The Sundarbans",
+        "duration":"2 Days",
+        "price": "8000",
+        "location":"Khulna Division",
+        "description": "Here you will find Bengal tigers stalking the mangroves as well as rhesus macaques swinging in the canopies",
+        "img": "https://i.ibb.co/x8C2wyg/sundarbanpic.jpg"
+    },
+    {
+        "key": "3P",
+        "name": "Sreemangal",
+        "duration":"3 Days",
+        "price": "6000",
+        "location":"Moulvibazar",
+
+        "description": "Srimangal is the tea-growing capital of Bangladesh and the area is a riot of different hues of green",
+        "img": "https://i.ibb.co/YBYzgXz/srimangol.jpg"
+    },
+    {
+        "key": "4K",
+        "name": "Rangamati",
+        "duration":"2 Days",
+        "price": "5000",
+        "location":"Kawkhali,Rangamati",
+
+        "description": "The town sits on the banks of Kaptai Lake which is known for its blue and green waters as well as the woodlands that surround it",
+        "img": "https://i.ibb.co/cQCJ0rT/rangamati-PIc.jpg"
+    },
+    {
+        "key": "5L",
+        "name": "Cox’s Bazar",
+        "duration":"4 Days",
+        "price": "9000",
+        "location":"Chittagong Division",
+
+        "description": "This little town in the far south-east of Bangladesh is known for its stunning beach which stretches for an amazing 120 kilometers from north to south along the side of the balmy Indian Ocean",
+        "img": "https://i.ibb.co/x1d0rJv/coxbazar.jpg"
+    },
+    {
+        "key": "6M",
+        "name": "Bandarban",
+        "duration":"2 Days",
+        "price": "3000",
+        "location":"Chittagong Division",
+
+        "description": "Surrounded by the Muranja, Wayla, and Chimbook mountains that rise to nearly 1,000 meters above sea level is the stunning town of Bandarban",
+        "img": "https://i.ibb.co/Lkv51bq/Bandarban-Pic.jpg"
+    }
+]
