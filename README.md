@@ -13,8 +13,8 @@
 
 <!-- # server Live site Link [https://we-care-healthcare.netlify.app/] -->
 # Server site Repo Link [https://github.com/programming-hero-web-course1/tourism-or-delivery-website-server-side-SharminPeu]
-# Client site Repo Link []
-# Client Live site Link []
+# Client site Repo Link [https://github.com/programming-hero-web-course1/tourism-or-delivery-website-client-side-SharminPeu]
+# Client Live site Link [https://tourhub-aca7e.web.app/]
 
 
 # For routing we use React Router
