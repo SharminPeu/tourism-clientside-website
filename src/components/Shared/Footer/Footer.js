@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="row">
         <div className="col-md-5">
           <div className="left-container text-start">
-            <h3>We-care Healthcare</h3>
+            <h3>TourHub</h3>
             <div className="icons-container d-flex text-center ">
               <div className="icon me-2">
                 <i className="fab fa-instagram"></i>
@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
             <p className="mt-4 ">
               <small>
-              Our Care Team is Ready to Help You!
+              Avail best trip from us
               </small>
             </p>
           </div>
@@ -41,12 +41,16 @@ const Footer = () => {
                 Home </li></Link>
               <Link className="footer-menu" to="/login"><li >
               Login</li></Link>
-              <Link className="footer-menu" to="/doctors">
+            
+              <Link className="footer-menu" to="/myOders">
               <li >
-              Doctors </li></Link>
-              <Link className="footer-menu" to="/appointment">
+              My Oders</li></Link>
+              <Link className="footer-menu" to="/manageOders">
               <li >
-              Appointment</li></Link>
+              Manage All Oders </li></Link>
+              <Link className="footer-menu" to="/addService">
+              <li >
+              Add Service </li></Link>
             </ul>
           </div>
         </div>
@@ -66,7 +70,7 @@ const Footer = () => {
                 <i class="far fa-envelope me-2"></i>
               </div>
               <div>
-                <h6>we-care@gmail.com </h6>
+                <h6>tour_hub@gmail.com </h6>
               </div>
             </div>
             <div className="phone d-flex align-items-center justify-content-center mt-4">
@@ -83,7 +87,7 @@ const Footer = () => {
           </div>
         </div>
         <p className="mt-5 text-center">
-          <small>we-care <i className="fas fa-copyright "></i>. All rights reserved.</small>
+          <small>TourHub <i className="fas fa-copyright "></i>. All rights reserved.</small>
         </p>
       </div>
     </div>

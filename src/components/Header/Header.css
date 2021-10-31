@@ -1,5 +1,9 @@
- /* header image style */
+.header{
+  margin-bottom: 100px;
+}
+
+/* header image style */
  .header-img{
-    height: 400px;
-    object-fit:fill;
+    height: 450px;
+    object-fit:contain;
   }

@@ -21,7 +21,7 @@ const Home = () => {
             {/* servicec part  */}
             <div className="text-center course-title">
             <h2><span className="text-primary">TourHub's </span> Most Popular Packages</h2>
-            <p className="mb-5">Our main moto to give the best service to all..We insure your better treatment from <br/> us! We claim that you will never regret it!</p>
+            <p className="mb-5">Our main moto to give the best offers to all..Check out our hot offers<br/> We claim you will never regret it!</p>
             </div>
             <div className="mx-auto container">
                 <div className="mx-auto row">

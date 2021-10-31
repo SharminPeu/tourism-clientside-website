@@ -66,7 +66,9 @@ const Booking = () => {
                         <div className="col-md-8 col-lg-8 col-6">
                             <div className="card-body text-start">
                                 <h3 className="card-title text-primary">{details?.name}</h3>
+                                
                                 <h5 className="card-text text-secondary">{details?.description}</h5>
+                                <h3 className="card-title fs-6 text-primary">${details?.price}</h3>
 
                             </div>
 
