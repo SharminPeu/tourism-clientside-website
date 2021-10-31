@@ -36,7 +36,7 @@ const Home = () => {
             </div>
             <div className="mx-auto container">
                 <div className="mx-auto row">
-                    <div className="col-md-12">
+                  
                         <div className="row">
                             {
                                 tours.map((tours) => (<ShowTourList key={tours.key}
@@ -64,7 +64,7 @@ const Home = () => {
                 </div>
             </div>
 
-        </div>
+
 
     );
 };

@@ -3,7 +3,7 @@ import "./NotFound.css"
 // set error for wrong typing 
 const NotFound = () => {
     return (
-        <div className="error">
+        <div className="error container">
             
             <h2 className="text-danger fw-bold fs-2">404</h2>
             <p className="fw-bold">Oops!! You are lost </p>

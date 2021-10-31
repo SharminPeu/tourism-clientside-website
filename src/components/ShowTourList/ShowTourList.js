@@ -14,7 +14,7 @@ const ShowTourList = (props) => {
 
 
     return (
-        <div className="mx-auto col-md-6 my-5 image">
+        <div className="mx-auto col-md-6 col-lg-6 col-12 my-5 image">
             <div className="tour card ">
                 <div className="image" >
                     <img className="img-fluid " src={img} alt="" />

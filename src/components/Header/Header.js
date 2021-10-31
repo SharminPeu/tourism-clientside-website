@@ -13,13 +13,13 @@ const Header = () => {
   </div>
   <div className="carousel-inner header-img">
     <div className="carousel-item active">
-      <img src="https://ttg.com.bd/uploads/tours/destinations/6444446P.jpg" className="d-block w-100" alt="..."/>
+      <img className="img-fluid" src="https://ttg.com.bd/uploads/tours/destinations/6444446P.jpg" className="d-block w-100" alt="..."/>
     </div>
     <div className="carousel-item">
-      <img src="https://media-cdn.tripadvisor.com/media/photo-c/2560x500/0d/77/22/14/amiakhum.jpg" className="d-block w-100" alt="..."/>
+      <img className="img-fluid" src="https://media-cdn.tripadvisor.com/media/photo-c/2560x500/0d/77/22/14/amiakhum.jpg" className="d-block w-100" alt="..."/>
     </div>
     <div className="carousel-item">
-      <img src="https://avijatrik.org/wp-content/uploads/2019/06/cover-3-870x555.jpg" className="d-block w-100" alt="..."/>
+      <img className="img-fluid" src="https://avijatrik.org/wp-content/uploads/2019/06/cover-3-870x555.jpg" className="d-block w-100" alt="..."/>
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

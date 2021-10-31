@@ -33,7 +33,7 @@ const AddService = () => {
       })
     }
   return (
-    <div>
+    <div className="container">
       <h1 className="mt-5 text-center text-info">Please Add A Tour Package</h1>
       <div className="login-box m-auto mt-5">
         <div className="event-box  d-flex justify-content-center align-items-center">

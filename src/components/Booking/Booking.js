@@ -53,7 +53,7 @@ const Booking = () => {
                 <h2>We Care about you ...</h2><br />
                 <div className="card mb-3" >
                     <div className="row g-0 service_single">
-                        <div className="col-md-4 col-lg-4 col-6">
+                        <div className="col-md-4 col-lg-4 col-12">
                             <img src={details?.img} className="img-fluid rounded-start" alt="..." />
                         </div>
                         <div className="col-md-8 col-lg-8 col-6">
