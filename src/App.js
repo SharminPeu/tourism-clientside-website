@@ -11,23 +11,14 @@ import NotFound from './components/NotFound/NotFound';
 import Footer from './components/Shared/Footer/Footer';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
-// import Register from './components/Register/Register';
-// import AuthProvider from './context/AuthProvider';
-
 import MenuBar from './components/Shared/MenuBar/MenuBar';
 import AuthProvider from './context/AuthProvider';
 import MyOders from './components/MyOders/MyOders';
-// import AddService from './components/AddService/AddService';
 import ManageAllOders from './components/ManageAllOders/ManageAllOders';
-// import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Booking from './components/Booking/Booking';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AddService from './components/AddService/AddService';
-// import Details from './components/Details/Details';
-// import Service from './components/Service/Service';
-// import PrivateRoute from './components/PrivateRoute/PrivateRoute'
-// import Appointment from './components/Appointment/Appointment';
-// import DoctorList from './components/DoctorList/DoctorList';
+
 
 
   
@@ -59,19 +50,10 @@ import AddService from './components/AddService/AddService';
                 <Route path="/manageOders">
                 <ManageAllOders></ManageAllOders>
                 </Route>
-            {/* <Route path="/doctors">
-              <DoctorList></DoctorList>
-            </Route> */}
             <PrivateRoute path="/booking/:bookingId">
           <Booking></Booking>
-      
              </PrivateRoute>
-             {/* <PrivateRoute exact path="/details/:id">
-            <Details></Details>
-          </PrivateRoute> */}
-            {/* <Route path="/appointment">
-            <Appointment></Appointment>
-            </Route>  */}
+
             <Route path="*">
               <NotFound></NotFound>
             </Route>

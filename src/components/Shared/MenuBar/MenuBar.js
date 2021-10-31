@@ -1,11 +1,9 @@
 import React from 'react';
 // import './Menubar.css'
 import './MenuBar.css'
-
 import { Link } from "react-router-dom";
 import useAuth from '../../../hooks/useAuth';
-// import useAuth from '../../../hooks/useAuth';
-// import useAuth from '../../hooks/useAuth';
+
 
 //set  all options in menubar
 const MenuBar = () => {
@@ -21,56 +19,33 @@ const MenuBar = () => {
                         <Link to="/home" className="items text-white fw-bold">
                             <li>Home</li>
                         </Link>
-                        {/* <Link to="/booking/bookingId" className="items text-white fw-bold">
-                            <li>Book Package</li>
-                        </Link> */}
+                        {user.email &&
 
-                        {/* <Link to="/register" className="items text-white fw-bold">
-                            <li>Register</li>
-                            
-                        </Link> */}
-            
-                        
-                           
-                           {user.email &&
-                               
-                                <Link to="/myOders" className="items text-white fw-bold">
-                            <li>My Oders</li>
-                        </Link> }
-{user.email &&
-    <Link to="/addService" className="items text-white fw-bold">
-                           <li>Add Service</li>
-                       </Link>
-}
-{
-    user.email &&
-        <Link to="/manageOders" className="items text-white fw-bold">
-                               <li>Manage All Oders</li>
-                           </Link>
-    
-}
-{user.email && <span className="fw-bold mt-2" style={{color:'lightblue'}}>{user.displayName} </span>}
+                            <Link to="/myOders" className="items text-white fw-bold">
+                                <li>My Oders</li>
+                            </Link>}
+                        {user.email &&
+                            <Link to="/addService" className="items text-white fw-bold">
+                                <li>Add Packages</li>
+                            </Link>
+                        }
+                        {
+                            user.email &&
+                            <Link to="/manageOders" className="items text-white fw-bold">
+                                <li>Manage All Oders</li>
+                            </Link>
 
-{user.email ?
+                        }
+                        {user.email && <span className="fw-bold mt-2" style={{ color: 'lightblue' }}>{user.displayName} </span>}
 
-    <button className=" mx-2 border-0 btn btn-light" onClick={logOut}>Log Out </button>
-    :
-    <Link to="/login" className="items text-white fw-bold">
-        <li>Login</li>
-    </Link>
-}
-                            
-                    
-                           
-                        
-                        {/* <Link to="/doctors" className="items text-white fw-bold">
-                            <li>Doctors</li>
-                        </Link> */}
+                        {user.email ?
 
-                        {/* <Link to="/appointment" className="items text-white fw-bold">
-                            <li>Appointment</li>
-                        </Link> */}
-
+                            <button className=" mx-2 border-0 btn btn-light" onClick={logOut}>Log Out </button>
+                            :
+                            <Link to="/login" className="items text-white fw-bold">
+                                <li>Login</li>
+                            </Link>
+                        }
                     </ul>
                 </div>
             </nav>

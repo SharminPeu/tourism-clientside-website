@@ -41,16 +41,7 @@ const Footer = () => {
                 Home </li></Link>
               <Link className="footer-menu" to="/login"><li >
               Login</li></Link>
-            
-              <Link className="footer-menu" to="/myOders">
-              <li >
-              My Oders</li></Link>
-              <Link className="footer-menu" to="/manageOders">
-              <li >
-              Manage All Oders </li></Link>
-              <Link className="footer-menu" to="/addService">
-              <li >
-              Add Service </li></Link>
+           
             </ul>
           </div>
         </div>
@@ -67,7 +58,7 @@ const Footer = () => {
             </div>
             <div className="phone d-flex align-items-center justify-content-center mt-4">
               <div className="all-icon ">
-                <i class="far fa-envelope me-2"></i>
+                <i className="far fa-envelope me-2"></i>
               </div>
               <div>
                 <h6>tour_hub@gmail.com </h6>

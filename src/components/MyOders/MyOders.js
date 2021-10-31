@@ -15,21 +15,6 @@ const MyOders = () => {
   }, [user.email]);
 
   console.log(oders);
-//   const handleDelete= id =>{
-//     const url=`https://protected-brushlands-31405.herokuapp.com/services/${id}`
-//     fetch(url,{
-//         method: 'DELETE'
-//     })
-//     .then(res=>res.json())
-//     .then(data=>{
-//         console.log(data);
-//         if(data.deletedCount){
-//             alert('Deleted Successfully')
-//             const remaining=services.filter(service=>service._id !==id);
-//         setServices(remaining);
-//         }
-    
-//     })
 
     const handleDelete = (id) => {
         fetch(`https://guarded-thicket-64732.herokuapp.com/deleteOrder/${id}`, {
@@ -39,7 +24,7 @@ const MyOders = () => {
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount) {
-                alert('Deleted succssfully')
+                alert('Confirm Your Delete')
                 const remaining=oders.filter(oder=>oder._id !==id);
                 setOders(remaining);
 
@@ -56,8 +41,7 @@ const MyOders = () => {
          <div className="row">
       <h1>My Oders : {oders.length}</h1>
       {oders?.map((pd,index) => (
-         
-              <div className="col-12 col-md-6 col-lg-3  mx-auto ">
+              <div className="col-12 col-md-6 col-lg-3  mx-auto " key={pd._id}>
                   <div className="single-order">
               <img height="100px" className="rounded-circle" src={pd?.img} alt="" />
               <h5>{pd.name}</h5>

@@ -1,0 +1,9 @@
+.all-order{
+    border: 1px solid goldenrod;
+    height: 500px;
+    background-color:rgb(252, 251, 251);
+    border-radius: 10px;
+    box-shadow: 2px 4px 2px goldenrod;
+    margin-top: 20px;
+
+}

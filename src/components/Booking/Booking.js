@@ -29,7 +29,6 @@ const Booking = () => {
         const status="pending"
         const newData={...data,...details,status}
         data.email = user?.email;
-        // data.status="pending"
         fetch('https://guarded-thicket-64732.herokuapp.com/placeOrder', {
             method: "POST",
             headers: { "content-type": "application/json" },
@@ -42,8 +41,7 @@ const Booking = () => {
                     reset();
                 }
             })
-        //         console.log(result));
-        // console.log(data);
+ 
     }
         
         const handleClick = () => {
@@ -72,7 +70,7 @@ const Booking = () => {
                         </div>
                     </div>
                     </div>
-        
+        {/* Place order part */}
                         <div>
                             <h1 className="mt-5 text-center text-info">
                                 Please give some Details
