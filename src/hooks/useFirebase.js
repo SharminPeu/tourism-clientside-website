@@ -5,7 +5,8 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   onAuthStateChanged,
-  signOut
+  signOut,
+  updateProfile
   // createUserWithEmailAndPassword,
 } from "firebase/auth";
 
@@ -15,46 +16,87 @@ import { useEffect, useState } from "react";
 initAuth();
 
 const useFirebase = () => {
+  const [user , setUser]=useState({})
+  const [isLoading , setIsLoading] =useState(true)
   const auth = getAuth();
-  const provider = new GoogleAuthProvider();
+  const googleProvider = new GoogleAuthProvider();
+
+  useEffect(() =>{
+    const unsubscribe = onAuthStateChanged(auth , (user)=> {
+       console.log(user);
+         if(user){
+              
+             setUser(user)
+         } else{
+             setUser({})
+         }
+         setIsLoading(false)
+    })
+     return ()=> unsubscribe()
+},[])
 
 
-  const [user, setUser] = useState({});
-  const [error, setError] = useState("");
+ const signInWithGoogle=()=> {
+  return  signInWithPopup(auth, googleProvider)
 
-  const googleSignIn = () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        setUser(result.user);
-        
-        // console.log(result.user);
-        setError("");
-      })
-      .catch((error) => setError(error.message));
-  };
+ }
+ const updateName= (name)=> {
+  updateProfile(auth.currentUser, {
+    displayName: name
+  }).then(() => {
+    const newUser={...user, displayName: name} // recommend
+   setUser(newUser)
+    
+    // ...
+  }).catch((error) => {
+    // An error occurred
+    // ...
+  });
+}
 
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-        // const uid = user.uid;
-      }
-       else {
-        // User is signed out
-        // ...
-      }
-    });
-  }, []);
-
-  const logOut = () => {
+ const logOut=()=> {
+   setIsLoading(true);
+     console.log("logouttttt");
     signOut(auth)
-      .then(() => {
-        setUser({});
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+    .then(() => {
+        setUser({})
+      }).finally(()=>setIsLoading(false))
+  // const [user, setUser] = useState({});
+  // const [error, setError] = useState("");
+
+  // const googleSignIn = () => {
+  //   signInWithPopup(auth, provider)
+  //     .then((result) => {
+  //       setUser(result.user);
+        
+  //       // console.log(result.user);
+  //       setError("");
+  //     })
+  //     .catch((error) => setError(error.message));
+  // };
+
+  // useEffect(() => {
+  //   onAuthStateChanged(auth, (user) => {
+  //     if (user) {
+  //       setUser(user);
+  //       // const uid = user.uid;
+  //     }
+  //      else {
+  //       // User is signed out
+  //       // ...
+  //     }
+  //   });
+  // }, []);
+
+  // const logOut = () => {
+  //   signOut(auth)
+  //     .then(() => {
+  //       setUser({});
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
 
   // const handleGithubLogin = () => {
   //   signInWithPopup(auth, githubProvider)
@@ -86,11 +128,15 @@ const useFirebase = () => {
   //       const errorMessage = error.message;
   //     });
   // };
+    }
 
   return {
-    googleSignIn,
-    user,
-    logOut
+    user,setUser,
+    signInWithGoogle,
+    isLoading,
+    setIsLoading,
+    logOut,
+    updateName
   };
 };
 

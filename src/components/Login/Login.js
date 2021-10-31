@@ -2,12 +2,33 @@ import React from "react";
 import "./Login.css";
 // import useFirebase from "./../../Hook/useFirebase";
 // import useFirebase from "../hooks/useFirebase";
-import { Link} from "react-router-dom";
+import {  useHistory, useLocation } from 'react-router-dom';
+
 import useAuth from "../../hooks/useAuth";
 
 const Login = () => {
-  const { googleSignIn,error } = useAuth();
-  // console.log(handleGoogleLogin());
+  // const { googleSignIn,error } = useAuth();
+  const { signInWithGoogle,setUser , setIsLoading} = useAuth();
+  
+  const history= useHistory()
+const location = useLocation()
+
+const url= location.state?.from || "/home"
+
+const handleGoogleLogin = () => {
+  signInWithGoogle()
+    .then((res) => 
+      {
+        setIsLoading(true)
+        setUser(res.user)
+        history.push(url)
+      }
+        )
+    .catch((err) => console.log(err))
+    .finally(() => {
+      setIsLoading(false)
+    })
+  }
 
   return (
     <div>
@@ -20,10 +41,13 @@ const Login = () => {
       </div> */}
       <div className=" login login-box w-25 m-auto">
       <div className="  text-danger" style={{ height: "50px" }}>
-        {error}
+        {/* {error} */}
       </div>
+      {/* <button onClick={handleGoogleLogin}>Google Sign In</button> */}
+      
+      
         <div className="box border border d-flex justify-content-center align-items-center">
-          <button onClick={googleSignIn} className="btn w-75  btn-warning">
+          <button onClick={handleGoogleLogin} className="btn w-75  btn-warning">
             Google Sign In
           </button>
           {/* <p className="mt-3">
@@ -32,7 +56,8 @@ const Login = () => {
           
         </div>
       </div>
-    </div>
+      </div>
+  
   );
 };
 

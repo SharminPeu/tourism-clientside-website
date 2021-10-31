@@ -8,7 +8,7 @@ const Home = () => {
        const[tours,setTours]=useState([]);
        // load data from fakedata
        useEffect(()=>{
-           fetch('http://localhost:5000/tours')
+           fetch('https://guarded-thicket-64732.herokuapp.com/tours')
            .then(res=>res.json())
            .then(data=>setTours(data))
        },[])
@@ -20,7 +20,7 @@ const Home = () => {
 
             {/* servicec part  */}
             <div className="text-center course-title">
-            <h2><span className="text-primary">We-Cares</span> Services</h2>
+            <h2><span className="text-primary">TourHub's </span> Most Popular Packages</h2>
             <p className="mb-5">Our main moto to give the best service to all..We insure your better treatment from <br/> us! We claim that you will never regret it!</p>
             </div>
             <div className="mx-auto container">

@@ -19,6 +19,10 @@ import AuthProvider from './context/AuthProvider';
 import MyOders from './components/MyOders/MyOders';
 import AddService from './components/AddServices/AddService';
 import ManageAllOders from './components/ManageAllOders/ManageAllOders';
+// import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Booking from './components/Booking/Booking';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+// import Details from './components/Details/Details';
 // import Service from './components/Service/Service';
 // import PrivateRoute from './components/PrivateRoute/PrivateRoute'
 // import Appointment from './components/Appointment/Appointment';
@@ -56,13 +60,16 @@ import ManageAllOders from './components/ManageAllOders/ManageAllOders';
             {/* <Route path="/doctors">
               <DoctorList></DoctorList>
             </Route> */}
-            {/* <PrivateRoute path="/services/:serviceId">
-            <Service></Service> */}
+            <PrivateRoute path="/booking/:bookingId">
+          <Booking></Booking>
       
-            {/* </PrivateRoute>
-            <Route path="/appointment">
+             </PrivateRoute>
+             {/* <PrivateRoute exact path="/details/:id">
+            <Details></Details>
+          </PrivateRoute> */}
+            {/* <Route path="/appointment">
             <Appointment></Appointment>
-            </Route> */}
+            </Route>  */}
             <Route path="*">
               <NotFound></NotFound>
             </Route>
