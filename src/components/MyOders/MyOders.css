@@ -1,0 +1,9 @@
+.single-order{
+    border: 1px solid goldenrod;
+    height: 400px;
+    background-color: honeydew;
+    border-radius: 10px;
+    box-shadow: 2px 4px 2px goldenrod;
+    margin-top: 20px;
+
+}

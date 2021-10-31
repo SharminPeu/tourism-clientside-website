@@ -8,6 +8,7 @@ import './Booking.css';
 const Booking = () => {
     const { bookingId } = useParams();
     const [details, setDetails] = useState([]);
+    const {img,location,price}=details;
     // const [specificDetail,setSpecificDetail] = useState({})
     const history = useHistory();
     useEffect(() =>
@@ -25,12 +26,14 @@ const Booking = () => {
         formState: { errors },
     } = useForm();
     const onSubmit = (data) => {
+        const status="pending"
+        const newData={...data,...details,status}
         data.email = user?.email;
         // data.status="pending"
         fetch('https://guarded-thicket-64732.herokuapp.com/placeOrder', {
             method: "POST",
             headers: { "content-type": "application/json" },
-            body: JSON.stringify(data),
+            body: JSON.stringify(newData)
         })
             .then((res) => res.json())
             .then((result) => {
@@ -42,15 +45,7 @@ const Booking = () => {
         //         console.log(result));
         // console.log(data);
     }
-        //   useEffect(() =>{
-        //     if(details.length>0){
-        //         const matchedData= details.find(detail=> detail.key==bookingId)
-        //         setSpecificDetail(matchedData);
-        //     }
-
-        // }
-
-        // ,[details])
+        
         const handleClick = () => {
             history.push('/home')
         }
@@ -124,11 +119,7 @@ const Booking = () => {
 
                                             <input type="submit" className="btn btn-info w-50" />
                                         </form>
-                                        {/* <p className="m-2 mb-2">
-                                            already have account?{" "} */}
-                                            {/* <Link to="/login">
-                                                <span className="text-danger">create account</span>
-                                            </Link> */}
+                                     
 
                                     </div>
                                 </div>

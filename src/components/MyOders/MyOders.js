@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-// import useFirebase from "../../Hook/useFirebase";
 import { useEffect } from "react";
 import useAuth from "../../hooks/useAuth";
+import './MyOders.css'
 
 const MyOders = () => {
   const { user } = useAuth();
@@ -39,7 +39,7 @@ const MyOders = () => {
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount) {
-                alert('Deleted Successfully')
+                alert('Deleted succssfully')
                 const remaining=oders.filter(oder=>oder._id !==id);
                 setOders(remaining);
 
@@ -52,27 +52,39 @@ const MyOders = () => {
       };
   
   return (
-    <div>
+    <div className="container">
+         <div className="row">
       <h1>My Oders : {oders.length}</h1>
-      {oders?.map((pd, index) => (
-        //   <tbody>
-        //     <tr>
-        <ul>
-              <li>{index}</li>
-              <li>{pd.img}</li>
-              <li>{pd?.name}</li>
-              <li>{pd?.email}</li>
-              <li>{pd?.date}</li>
-              {/* <button className="btn bg-danger p-2">{pd?.status}</button> */}
-              <button
-                onClick={() => handleDelete(pd._id)}
+      {oders?.map((pd,index) => (
+         
+              <div className="col-12 col-md-6 col-lg-3  mx-auto ">
+                  <div className="single-order">
+              <img height="100px" className="rounded-circle" src={pd?.img} alt="" />
+              <h5>{pd.name}</h5>
+              <p>Order:{pd._id}</p>
+              <p>{pd.email}</p>
+              <p>Address:{pd.address}</p>
+              <p>Mobile No:{pd.mobeli_number}</p>
+                <p className="text-primary fw-bold">${pd.price}</p>
+                
+            <div className="d-flex justify-content-evenly">
+            <div>
+               <button className="btn bg-warning p-2">{pd?.status}</button></div>
+               <div>
+          <button
+           onClick={() => handleDelete(pd._id)}
                 className="btn bg-danger p-2"
               >
-                Delete
-              </button>
-              </ul>
-        ))}
-    </div>
+                  Delete
+                  </button>
+              </div>
+        </div> 
+        </div>  
+        </div> 
+    
+     ) )}
+      </div>
+</div>     
   );
 };
 

@@ -35,9 +35,9 @@ const AddService = () => {
   return (
     <div>
       <h1 className="mt-5 text-center text-info">Please Add A Tour Package</h1>
-      <div className="login-box w-25 m-auto mt-5">
-        <div className="event-box border border d-flex justify-content-center align-items-center">
-          <div className="login-form">
+      <div className="login-box m-auto mt-5">
+        <div className="event-box  d-flex justify-content-center align-items-center">
+          <div className="login-form ">
             <form onSubmit={handleSubmit(onSubmit)}>
             <input
                 {...register("key")}

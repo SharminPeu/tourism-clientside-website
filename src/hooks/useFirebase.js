@@ -43,6 +43,7 @@ const useFirebase = () => {
  const updateName= (name)=> {
   updateProfile(auth.currentUser, {
     displayName: name
+
   }).then(() => {
     const newUser={...user, displayName: name} // recommend
    setUser(newUser)

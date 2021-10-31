@@ -17,11 +17,12 @@ import Login from './components/Login/Login';
 import MenuBar from './components/Shared/MenuBar/MenuBar';
 import AuthProvider from './context/AuthProvider';
 import MyOders from './components/MyOders/MyOders';
-import AddService from './components/AddServices/AddService';
+// import AddService from './components/AddService/AddService';
 import ManageAllOders from './components/ManageAllOders/ManageAllOders';
 // import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Booking from './components/Booking/Booking';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import AddService from './components/AddService/AddService';
 // import Details from './components/Details/Details';
 // import Service from './components/Service/Service';
 // import PrivateRoute from './components/PrivateRoute/PrivateRoute'
@@ -52,7 +53,8 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
                 <MyOders></MyOders>
                 </Route>
                 <Route path="/addService">
-                <AddService></AddService>
+                <AddService
+                ></AddService>
                 </Route>
                 <Route path="/manageOders">
                 <ManageAllOders></ManageAllOders>
