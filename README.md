@@ -1,7 +1,7 @@
 # Getting Started with TourHub
 
 ## Project Description
-* TourHub is a travel agency related site
+* TourHub is a travel agency related full stack website
 *	TourHub provides different kind of tour packages in Bangladesh. After login user can see add service , my order, manage all order section in top of the page. It’s a fully responsive application.
 *	Users can book their tour packages using their accounts.
 *	Users can view/cancel the packages, update booking status, can also add tour packages
