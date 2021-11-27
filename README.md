@@ -2,12 +2,13 @@
 
 ## Project Description
 * TourHub is a travel agency related site
-* Here we have different section in our page,People can visit our home page and for booking the package detail they have to be must login from this website.
-* After successful login user can see AddService ,My Order, ManageAll Order in the top of the page.
-* They can make order as their choise ,also delete the order.
-## We Use 
+*	TourHub provides different kind of tour packages in Bangladesh. After login user can see add service , my order, manage all order section in top of the page. It’s a fully responsive application.
+*	Users can book their tour packages using their accounts.
+*	Users can view/cancel the packages, update booking status, can also add tour packages
 
-* In this project we use bootstrap framework, react hook form, and customised Css and for icon we use fontawesome
+##	Technology Used 
+
+* HTML,CSS, React.Js, Express.js, Bootstrap, React Bootstrap ,React Router, React Hook, Rest Api, FontAwesome,Firebase, Heroku.
 * For database part we use mongodb
 
 
